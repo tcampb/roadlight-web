@@ -20,7 +20,7 @@ document.querySelector("#connect").addEventListener("click", async () => {
 
   characteristic.addEventListener("characteristicvaluechanged", async (event) => {
     const value = event.target.value;
-    const powerValue = value.getUint8(1);
+    const powerValue = value.getUint8(2);
 
     const ftp = window.getFtp();
     const { title: previousZoneName } = getPowerZone(ftp, previousPower);
